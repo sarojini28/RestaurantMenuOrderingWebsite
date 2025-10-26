@@ -1,0 +1,220 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.welcome-bg {
+  position: relative;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwLoj_GjL4HcFepzIMtbkIzX_ZI2geIYL07A&s') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* dark overlay */
+}
+
+.welcome-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf2;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #ff7043;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #fff3e0;
+}
+
+/* Welcome Page */
+.welcome-bg {
+  background: url('https://i.ibb.co/hLxGv0f/restaurant-bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-container {
+  background: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.welcome-container h1 {
+  color: #d84315;
+  margin-bottom: 10px;
+}
+
+/* Menu Section */
+.menu-section {
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.item h3 {
+  color: #ff7043;
+  margin-top: 10px;
+}
+
+.item span {
+  display: block;
+  color: #d84315;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn, button {
+  display: inline-block;
+  background: #ff7043;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover, button:hover {
+  background: #e64a19;
+}
+
+/* Order Form */
+.order-form {
+  background: #fff3e0;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+button {
+  font-size: 1rem;
+}
+ .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      animation: popupFade 0.4s ease;
+    }
+
+    .popup-content h2 {
+      color: #d84315;
+      margin-bottom: 10px;
+    }
+
+    .popup-content p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .close-btn {
+      background: #ff7043;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .close-btn:hover {
+      background: #e64a19;
+    }
+
+    @keyframes popupFade {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
